@@ -1,35 +1,15 @@
-var findMedianSortedArrays = function(nums1 = [], nums2 = []) {
-  var nums = [];
-  var median = 0;
+let findMedianSortedArrays = (nums1 = [], nums2 = []) => {
+  let sortNums = (a,b) => { return a - b; };
+  let nums = nums1.concat(nums2).sort(sortNums);
+  let len = nums.length;
 
-  // pushes the values to the new array
-  if(nums1 != []) {
-    for(var i = 0; i < nums1.length; i++) {
-      nums.push(nums1[i]);
-    }
-  }
-
-  if(nums2 != []) {
-    for(var i = 0; i < nums2.length; i++) {
-      nums.push(nums2[i]);
-    }
-  }
-
-  var len = nums.length;
-
-  // executes if the array contains an even number of elems
   if(len % 2 == 0) {
-    // ex (2+3)/2 = 2.5
-    median = (nums[(len/2)-1] + nums[(len/2)])/2
+    let index = len / 2;
+    return (nums[--index] + nums[++index]) / 2;
   }
 
   else {
-    median = nums[len/2];
+    let index = Math.round(nums.length / 2) - (len % 2);
+    return nums[index];
   }
-
-  return median;
 };
-
-let x = [1,3];
-
-console.log(findMedianSortedArrays(x));

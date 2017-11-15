@@ -12,4 +12,3 @@ const hammingDistance = (x, y) => {
 };
 
 let x = hammingDistance(1, 4);
-x
