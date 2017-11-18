@@ -12,9 +12,10 @@
 node_modules/
 .tmp/
 
-# Personal Ignore Extensions
+# Personal Pref
 .stylelintrc
-package-lock.json
+test.js
+test.py
 
 # OS or Editor folders
 .DS_Store
