@@ -1,3 +1,12 @@
+Array.prototype.sum = function() {
+  let sum = 0;
+
+  for(num of this)
+    sum += num;
+
+  return sum;
+}
+
 let calPoints = (ops) => {
   let scores = [];
   let count = 0;
@@ -25,13 +34,11 @@ let calPoints = (ops) => {
     }
   }
 
-  for(score of scores) {
-    sum += score;
-    console.log(`Round ${++count}: You could get ${score} points. The sum is: ${sum}`);
-  }
-
-  return sum;
+  return scores.sum();
 };
 
 let test = ['5', '2', 'C', 'D', '+'];
 calPoints(test);
+
+// let x = [1, 2, 3];
+// x.sum();
