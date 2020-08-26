@@ -1,13 +1,13 @@
-var addTwoNumbers = function(l1, l2) {
+// https://leetcode.com/problems/add-two-numbers/
+
+var addTwoNumbers = function (l1, l2) {
   let res = [];
   var sum = 0;
 
-  for(var i = 0; i < l1.length; i++) {
+  for (var i = 0; i < l1.length; i++) {
     sum = l1[i] + l2[i];
 
-    if(sum)
-
-    res.push(sum);
+    if (sum) res.push(sum);
   }
 
   return res;

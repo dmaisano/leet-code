@@ -1,13 +1,15 @@
+// https://leetcode.com/problems/hamming-distance/
+
 const hammingDistance = (x, y) => {
   // ^ bitwsise XOR operator
-  let res = x^y;
+  let res = x ^ y;
   let distance; // hamming distance variable
 
-  for(distance = 0; res > 0; distance++) {
+  for (distance = 0; res > 0; distance++) {
     // &= bitwise AND operator
-     res &= res - 1;
+    res &= res - 1;
   }
-  
+
   return distance;
 };
 
