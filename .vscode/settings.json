@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "vector": "cpp",
+    "ostream": "cpp",
+    "functional": "cpp"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  }
+}
