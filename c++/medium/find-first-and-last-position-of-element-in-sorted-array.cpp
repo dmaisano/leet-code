@@ -6,7 +6,8 @@ using namespace std;
 
 class Solution {
 public:
-    int findStartingIndex(vector<int>& a, int x) {
+    int findStartingIndex(vector<int>& a, int x)
+    {
         int index = -1;
         int start = 0, end = a.size() - 1;
 
@@ -27,7 +28,8 @@ public:
         return index;
     }
 
-    int findEndingIndex(vector<int>& a, int x) {
+    int findEndingIndex(vector<int>& a, int x)
+    {
         int index = -1;
         int start = 0, end = a.size() - 1;
 
@@ -48,7 +50,8 @@ public:
         return index;
     }
 
-    vector<int> searchRange(vector<int>& a, int x) {
+    vector<int> searchRange(vector<int>& a, int x)
+    {
         int startingIndex = findStartingIndex(a, x);
         int endingIndex = findEndingIndex(a, x);
 

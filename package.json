@@ -8,7 +8,7 @@
     "clang-format": "^1.4.0"
   },
   "scripts": {
-    "clang-format:cpp": "clang-format -i -style=WebKit c++/*.cpp"
+    "clang-format:cpp": "clang-format -i -style=WebKit c++/**/*.cpp"
   },
   "repository": {
     "type": "git",
