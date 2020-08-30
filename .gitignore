@@ -1,3 +1,12 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
 # Numerous always-ignore extensions
 *.diff
 *.err
@@ -32,3 +41,4 @@ nbproject
 .komodotools
 _notes
 dwsync.xml
+
