@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "clang-format": "^1.4.0"
+    "clang-format": "^1.4.0",
+    "ts-node": "^9.0.0"
   },
   "scripts": {
     "clang-format:cpp": "clang-format -i -style=WebKit c++/**/*.cpp"
