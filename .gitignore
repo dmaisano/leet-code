@@ -22,6 +22,7 @@ node_modules/
 .tmp/
 
 # Personal Pref
+dist/
 .stylelintrc
 test.js
 test.py
