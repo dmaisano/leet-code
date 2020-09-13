@@ -1,6 +1,9 @@
 // https://leetcode.com/problems/longest-palindrome/
 
-function longestPalindrome(s: string): number {
+let longestPalindrome: (s: string) => number;
+
+// slow solution
+longestPalindrome = (s: string): number => {
   // count of all the characters in the string
   const charCounts: {
     [key: string]: number;
@@ -15,28 +18,49 @@ function longestPalindrome(s: string): number {
   for (const char in charCounts) {
     const count = charCounts[char];
 
-    if (oddFound) {
-      if (count > 1) {
-        if (count % 2 == 0) {
-          res += count;
-        } else {
-          // odd number of characters
-          // subtract one to make it even and valid for the palindrome
-          res += count - 1;
-        }
-      }
+    if (count % 2 === 0) {
+      res += count;
     } else {
-      if (count % 2 == 0) {
-        res += count;
+      if (oddFound) {
+        res += count - 1;
       } else {
-        // allows for a maximum of one odd character in the center of the palindrome
-        res += count;
+        // found the first odd character
         oddFound = true;
+        res += count;
       }
     }
   }
 
   return res;
-}
+};
 
-console.log(longestPalindrome("dddcbabc"));
+// optimized solution (only slightly faster)
+longestPalindrome = (s: string): number => {
+  // count of all the characters in the string
+  const charCounts: {
+    [key: string]: number;
+  } = {};
+
+  for (const char of s) {
+    charCounts[char] == null ? (charCounts[char] = 1) : charCounts[char]++;
+  }
+
+  let res: number = 0;
+  for (const char in charCounts) {
+    const count = charCounts[char];
+
+    // adds the greatest maximum occurence of even characters
+    res += ~~(count / 2) * 2;
+
+    // found first occurence of odd characters
+    if (res % 2 === 0 && count % 2 === 1) {
+      res += 1;
+    }
+  }
+
+  return res;
+};
+
+console.log({
+  "longest palindrome": longestPalindrome("abccccdd"), // 7
+});
