@@ -1,0 +1,23 @@
+{
+  "name": "leet-code",
+  "version": "1.0.0",
+  "description": "![](./splash.png)",
+  "main": "index.js",
+  "scripts": {
+    "ts:watch": "ts-node-dev --watch './typescript/**/*.ts' --respawn typescript/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmaisano/leet-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmaisano/leet-code/issues"
+  },
+  "homepage": "https://github.com/dmaisano/leet-code#readme",
+  "devDependencies": {
+    "ts-node-dev": "^1.1.8"
+  }
+}
