@@ -43,3 +43,6 @@ nbproject
 _notes
 dwsync.xml
 
+# python
+.pytest_cache
+__pycache__
