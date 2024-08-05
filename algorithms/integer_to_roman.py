@@ -1,21 +1,29 @@
-from pprint import pprint
-
-
 class Solution:
+    def __init__(self) -> None:
+        self.val_syms = [
+            (1000, "M"),
+            (900, "CM"),
+            (500, "D"),
+            (400, "CD"),
+            (100, "C"),
+            (90, "XC"),
+            (50, "L"),
+            (40, "XL"),
+            (10, "X"),
+            (9, "IX"),
+            (5, "V"),
+            (4, "IV"),
+            (1, "I"),
+        ]
+
     def intToRoman(self, num: int) -> str:
-        val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-        syms = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
-        roman_num = ""
-        i = 0
-        while num > 0:
-            for _ in range(num // val[i]):
-                roman_num += syms[i]
-                num -= val[i]
-            i += 1
-        return roman_num
+        roman_num = []
 
+        for value, symbol in self.val_syms:
+            if num == 0:
+                break
+            count = num // value
+            roman_num.append(symbol * count)
+            num -= value * count
 
-if __name__ == "__main__":
-    soln = Solution()
-    res = soln.intToRoman(58)
-    pprint(res)
+        return "".join(roman_num)

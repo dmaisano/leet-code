@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "leet-code"
+name = "leet_code"
 version = "0.1.0"
 description = "leet code problems"
 authors = ["dmaisano <dmaisanooo@gmail.com>"]
@@ -10,11 +10,12 @@ mypy = "mypy --config-file mypy.ini"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-mypy = "^1.11.1"
+pytest = "^8.3.2"
 
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.8.0"
+mypy = "^1.11.1"
 
 [build-system]
 requires = ["poetry-core"]

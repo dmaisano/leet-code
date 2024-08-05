@@ -1,92 +1,62 @@
 class Solution:
+    def __init__(self) -> None:
+        self.less_than_20 = [
+            "",
+            "One",
+            "Two",
+            "Three",
+            "Four",
+            "Five",
+            "Six",
+            "Seven",
+            "Eight",
+            "Nine",
+            "Ten",
+            "Eleven",
+            "Twelve",
+            "Thirteen",
+            "Fourteen",
+            "Fifteen",
+            "Sixteen",
+            "Seventeen",
+            "Eighteen",
+            "Nineteen",
+        ]
+        self.tens = [
+            "",
+            "Ten",
+            "Twenty",
+            "Thirty",
+            "Forty",
+            "Fifty",
+            "Sixty",
+            "Seventy",
+            "Eighty",
+            "Ninety",
+        ]
+        self.thousands = ["", "Thousand", "Million", "Billion"]
+
     def numberToWords(self, num: int) -> str:
         if num == 0:
             return "Zero"
 
-        def one(num):
-            switcher = {
-                1: "One",
-                2: "Two",
-                3: "Three",
-                4: "Four",
-                5: "Five",
-                6: "Six",
-                7: "Seven",
-                8: "Eight",
-                9: "Nine",
-            }
-            return switcher.get(num)
+        res = ""
+        for i in range(len(self.thousands)):
+            if num % 1000 != 0:
+                res = self.helper(num % 1000) + self.thousands[i] + " " + res
+            num //= 1000
 
-        def two_less_20(num):
-            switcher = {
-                10: "Ten",
-                11: "Eleven",
-                12: "Twelve",
-                13: "Thirteen",
-                14: "Fourteen",
-                15: "Fifteen",
-                16: "Sixteen",
-                17: "Seventeen",
-                18: "Eighteen",
-                19: "Nineteen",
-            }
-            return switcher.get(num)
+        return res.strip()
 
-        def ten(num):
-            switcher = {
-                2: "Twenty",
-                3: "Thirty",
-                4: "Forty",
-                5: "Fifty",
-                6: "Sixty",
-                7: "Seventy",
-                8: "Eighty",
-                9: "Ninety",
-            }
-            return switcher.get(num)
-
-        def two(num):
-            if not num:
-                return ""
-            elif num < 10:
-                return one(num)
-            elif num < 20:
-                return two_less_20(num)
-            else:
-                tenner = num // 10
-                remainder = num % 10
-                return ten(tenner) + " " + one(remainder) if remainder else ten(tenner)
-
-        def three(num):
-            hundred = num // 100
-            remainder = num % 100
-            if hundred and remainder:
-                return one(hundred) + " Hundred " + two(remainder)
-            elif not hundred and remainder:
-                return two(remainder)
-            elif hundred and not remainder:
-                return one(hundred) + " Hundred"
-
-        result = "Negative" if num < 0 else ""
-        num = abs(num)
-        billion = num // 1000000000
-        million = (num % 1000000000) // 1000000
-        thousand = (num % 1000000) // 1000
-        remainder = num % 1000
-
-        if billion:
-            result += three(billion) + " Billion"
-        if million:
-            result += " " if result else ""
-            result += three(million) + " Million"
-        if thousand:
-            result += " " if result else ""
-            result += three(thousand) + " Thousand"
-        if remainder:
-            result += " " if result else ""
-            result += three(remainder)
-
-        return result
+    def helper(self, num: int) -> str:
+        if num == 0:
+            return ""
+        elif num < 20:
+            return self.less_than_20[num] + " "
+        elif num < 100:
+            return self.tens[num // 10] + " " + self.helper(num % 10)
+        else:
+            return self.less_than_20[num // 100] + " Hundred " + self.helper(num % 100)
 
 
 if __name__ == "__main__":

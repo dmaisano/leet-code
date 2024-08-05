@@ -5,5 +5,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    res = Solution().min_deci_binary_numbers("27346209830709182346")
+    res = Solution().minPartitions("27346209830709182346")
     print(res)

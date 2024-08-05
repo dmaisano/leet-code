@@ -2,24 +2,26 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug TypeScript File",
+      "name": "TypeScript: Debug File",
       "type": "node",
       "request": "launch",
       "runtimeArgs": ["-r", "ts-node/register"],
       "args": ["${file}"],
       "cwd": "${workspaceFolder}",
       "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "Python: Debug File",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "${command:extension.commandvariable.file.relativeFileDotsNoExtension}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "python": "${workspaceFolder}/.direnv/python-3.12.4/bin/python",
+      "justMyCode": true
     }
-    // {
-    //   "name": "Example",
-    //   "type": "node",
-    //   "request": "launch",
-    //   "program": "${workspaceFolder}/${file}",
-    //   "runtimeExecutable": "node",
-    //   "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
-    //   "cwd": "${workspaceRoot}",
-    //   "internalConsoleOptions": "openOnSessionStart",
-    //   "skipFiles": ["<node_internals>/**", "node_modules/**"]
-    // }
   ]
 }

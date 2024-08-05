@@ -1,50 +1,42 @@
-from typing import Optional
-from numbers import Number
+from typing import Optional, TypeAlias, Union
+
+Number: TypeAlias = Union[int, float]
 
 
-# Definition for singly-linked list.
 class ListNode:
     def __init__(self, val: Number = 0, next: Optional["ListNode"] = None):
-        self.val: Number = val
+        self.val: int | float = val
         self.next: ListNode | None = next
 
 
 class Solution:
-    def determineGCD(self, a: Number, b: Number):
+    def determineGCD(self, a: Number, b: Number) -> Number:
         while b:
             a, b = b, a % b
         return a
 
-    def listInsert(self, node: Optional[ListNode], val: Number) -> Optional[ListNode]:
-        trail = node.next
-        node.next = ListNode(val, trail)
+    def listInsert(self, val: Number, node: Optional[ListNode] = None) -> None:
+        if node is not None:
+            trail = node.next
+            node.next = ListNode(val, trail)
 
     def insertGreatestCommonDivisors(
-        self, head: Optional[ListNode]
-    ) -> Optional[ListNode]:
-        cursor = head
+        self, head: Optional[ListNode] = None
+    ) -> ListNode | None:
+        if not head or head.next is None:
+            return head
 
-        skipCurrent = False
+        cursor = head
         while cursor.next is not None:
             nextValue = cursor.next.val or None
 
             if nextValue is None:
                 break
-            if skipCurrent is True:
-                cursor = cursor.next
-                skipCurrent = False
-                continue
 
             gcd = self.determineGCD(cursor.val, nextValue)
-            self.listInsert(cursor, gcd)
+            self.listInsert(gcd, cursor)
             cursor = cursor.next
-            skipCurrent = True
+            if cursor.next:
+                cursor = cursor.next
 
         return head
-
-
-if __name__ == "__main__":
-    soln = Solution()
-    sll = ListNode(18, ListNode(6, ListNode(10, ListNode(3))))
-
-    res = soln.insertGreatestCommonDivisors(sll)
