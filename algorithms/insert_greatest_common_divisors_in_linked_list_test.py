@@ -29,8 +29,9 @@ def test_determineGCD(solution: Solution) -> None:
 
 def test_listInsert(solution: Solution) -> None:
     node = ListNode(1, ListNode(3))
-    solution.listInsert(2, node)
-    assert node.next.val == 2
+    solution.listInsert(5, node)
+    assert node.val == 1
+    assert node.next.val == 5
     assert node.next.next.val == 3
 
 
