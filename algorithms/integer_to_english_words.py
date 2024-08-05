@@ -60,9 +60,3 @@ class Solution:
             return self.tens[num // 10] + " " + self.helper(num % 10)
         else:
             return self.less_than_20[num // 100] + " Hundred " + self.helper(num % 100)
-
-
-if __name__ == "__main__":
-    soln = Solution()
-    res = soln.numberToWords(-120_000)
-    print(res)
