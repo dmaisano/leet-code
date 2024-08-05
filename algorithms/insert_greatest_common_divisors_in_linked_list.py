@@ -4,7 +4,7 @@ from numbers import Number
 
 # Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val: Number=0, next: Optional['ListNode']=None):
+    def __init__(self, val: Number = 0, next: Optional["ListNode"] = None):
         self.val: Number = val
         self.next: ListNode | None = next
 
@@ -19,7 +19,9 @@ class Solution:
         trail = node.next
         node.next = ListNode(val, trail)
 
-    def insertGreatestCommonDivisors(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def insertGreatestCommonDivisors(
+        self, head: Optional[ListNode]
+    ) -> Optional[ListNode]:
         cursor = head
 
         skipCurrent = False
