@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "leet-code"
+version = "0.1.0"
+description = "leet code problems"
+authors = ["dmaisano <dmaisanooo@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
