@@ -1,4 +1,4 @@
-function createCounter(n: number): () => number {
+export function createCounter(n: number): () => number {
   return () => n++ // ? https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 }
 
