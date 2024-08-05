@@ -1,15 +1,15 @@
 {
-  "files.exclude": {
-    "**/__pycache__": true
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
   },
   "eslint.workingDirectories": [
     {
       "mode": "auto"
     }
   ],
-  "[python]": {
-    "editor.tabSize": 4,
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
+  "files.exclude": {
+    "**/__pycache__": true
   }
 }
