@@ -37,6 +37,9 @@ class Solution:
         self.thousands = ["", "Thousand", "Million", "Billion"]
 
     def numberToWords(self, num: int) -> str:
+        if num < 0:
+            raise ValueError("Input must be a non-negative integer")
+
         if num == 0:
             return "Zero"
 
