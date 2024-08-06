@@ -39,3 +39,7 @@ def test_int_to_roman_0(solution: Solution) -> None:
 def test_int_to_roman_edge_cases(solution: Solution) -> None:
     assert solution.intToRoman(3999) == "MMMCMXCIX"
     assert solution.intToRoman(1) == "I"
+
+
+if __name__ == "__main__":
+    pytest.main()

@@ -57,3 +57,7 @@ def test_insertGreatestCommonDivisors_single_element(solution: Solution) -> None
     head = ListNode(5)
     new_head = solution.insertGreatestCommonDivisors(head)
     assert sll_to_python_list(new_head) == [5]
+
+
+if __name__ == "__main__":
+    pytest.main()

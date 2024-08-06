@@ -13,3 +13,7 @@ def test_reverse_integer(solution: Solution) -> None:
     assert solution.reverse(-123) == -321
     assert solution.reverse(120) == 21
     assert solution.reverse(0) == 0
+
+
+if __name__ == "__main__":
+    pytest.main()

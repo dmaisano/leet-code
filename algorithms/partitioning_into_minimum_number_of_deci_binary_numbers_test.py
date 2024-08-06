@@ -42,3 +42,7 @@ def test_min_partitions_empty_string(solution: Solution) -> None:
 def test_min_partitions_non_numeric_characters(solution: Solution) -> None:
     with pytest.raises(ValueError):
         solution.minPartitions("12a34")
+
+
+if __name__ == "__main__":
+    pytest.main()

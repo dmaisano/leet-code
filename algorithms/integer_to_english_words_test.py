@@ -60,3 +60,7 @@ def test_number_to_words_large_number(solution: Solution) -> None:
         solution.numberToWords(9876543210)
         == "Nine Billion Eight Hundred Seventy Six Million Five Hundred Forty Three Thousand Two Hundred Ten"
     )
+
+
+if __name__ == "__main__":
+    pytest.main()
