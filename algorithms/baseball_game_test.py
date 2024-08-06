@@ -1,4 +1,5 @@
 import pytest
+
 from .baseball_game import Solution
 
 

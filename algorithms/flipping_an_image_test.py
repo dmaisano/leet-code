@@ -1,4 +1,5 @@
 import pytest
+
 from .flipping_an_image import Solution
 
 

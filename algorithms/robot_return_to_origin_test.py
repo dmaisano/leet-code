@@ -1,4 +1,5 @@
 import pytest
+
 from .robot_return_to_origin import Solution
 
 

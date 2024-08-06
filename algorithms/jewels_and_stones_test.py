@@ -1,4 +1,5 @@
 import pytest
+
 from .jewels_and_stones import Solution
 
 
