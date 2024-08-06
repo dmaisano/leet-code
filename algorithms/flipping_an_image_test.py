@@ -3,7 +3,7 @@ from .flipping_an_image import Solution
 
 
 @pytest.fixture
-def solution() -> Solution:
+def soln() -> Solution:
     return Solution()
 
 
