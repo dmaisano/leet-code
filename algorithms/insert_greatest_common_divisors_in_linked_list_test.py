@@ -20,14 +20,14 @@ def solution() -> Solution:
     return Solution()
 
 
-def test_determineGCD(solution: Solution) -> None:
+def test_determineGCD(soln: Solution) -> None:
     assert solution.determineGCD(48, 18) == 6
     assert solution.determineGCD(7, 5) == 1
     assert solution.determineGCD(100, 10) == 10
     assert solution.determineGCD(270, 192) == 6
 
 
-def test_listInsert(solution: Solution) -> None:
+def test_listInsert(soln: Solution) -> None:
     node = ListNode(1, ListNode(3))
     solution.listInsert(5, node)
     assert node.val == 1
@@ -35,7 +35,7 @@ def test_listInsert(solution: Solution) -> None:
     assert node.next.next.val == 3
 
 
-def test_insertGreatestCommonDivisors(solution: Solution) -> None:
+def test_insertGreatestCommonDivisors(soln: Solution) -> None:
     head = ListNode(18, ListNode(48, ListNode(30)))
     new_head = solution.insertGreatestCommonDivisors(head)
     assert sll_to_python_list(new_head) == [18, 6, 48, 6, 30]
@@ -53,7 +53,7 @@ def test_insertGreatestCommonDivisors(solution: Solution) -> None:
     assert new_head is None
 
 
-def test_insertGreatestCommonDivisors_single_element(solution: Solution) -> None:
+def test_insertGreatestCommonDivisors_single_element(soln: Solution) -> None:
     head = ListNode(5)
     new_head = solution.insertGreatestCommonDivisors(head)
     assert sll_to_python_list(new_head) == [5]

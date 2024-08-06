@@ -7,7 +7,7 @@ def solution() -> Solution:
     return Solution()
 
 
-def test_numJewelsInStones(solution: Solution) -> None:
+def test_numJewelsInStones(soln: Solution) -> None:
     assert solution.numJewelsInStones("aA", "aAAbbbb") == 3
     assert solution.numJewelsInStones("z", "ZZ") == 0
     assert solution.numJewelsInStones("", "aAAbbbb") == 0

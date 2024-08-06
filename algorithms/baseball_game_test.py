@@ -7,7 +7,7 @@ def solution() -> Solution:
     return Solution()
 
 
-def test_calPoints(solution: Solution) -> None:
+def test_calPoints(soln: Solution) -> None:
     assert solution.calPoints(["5", "2", "C", "D", "+"]) == 30
     assert solution.calPoints(["5", "-2", "4", "C", "D", "9", "+", "+"]) == 27
     assert solution.calPoints(["1", "C"]) == 0

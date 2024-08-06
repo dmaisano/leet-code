@@ -8,7 +8,7 @@ def solution() -> Solution:
     return Solution()
 
 
-def test_reverse_integer(solution: Solution) -> None:
+def test_reverse_integer(soln: Solution) -> None:
     assert solution.reverse(123) == 321
     assert solution.reverse(-123) == -321
     assert solution.reverse(120) == 21

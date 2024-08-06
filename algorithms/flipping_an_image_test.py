@@ -7,7 +7,7 @@ def solution() -> Solution:
     return Solution()
 
 
-def test_flip_and_invert_image(solution: Solution) -> None:
+def test_flip_and_invert_image(soln: Solution) -> None:
     sol = Solution()
 
     image1 = [[1, 1, 0], [1, 0, 1], [0, 0, 0]]
