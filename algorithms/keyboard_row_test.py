@@ -1,3 +1,5 @@
+from typing import List
+
 import pytest
 
 from .keyboard_row import Solution
@@ -8,51 +10,52 @@ def soln() -> Solution:
     return Solution()
 
 
-def test_case_1(soln: Solution) -> None:
-    words = ["Hello", "Alaska", "Dad", "Peace"]
-    expected = ["Alaska", "Dad"]
+def test_findWords_with_all_row1_words(soln: Solution) -> None:
+    words = ["not_row_1", "also_not_row_1", "def_not_row_1", "QwErTy"]
+    expected = ["QwErTy"]
+    print(soln.findWords(words))
     assert soln.findWords(words) == expected
 
 
-def test_case_2(soln: Solution) -> None:
-    words = ["omk"]
-    expected: list[str] = []
+def test_findWords_with_all_row2_words(soln: Solution) -> None:
+    words = ["asdf", "Sdfgh", "jkL"]
+    expected = ["asdf", "Sdfgh", "jkL"]
     assert soln.findWords(words) == expected
 
 
-def test_case_3(soln: Solution) -> None:
-    words = ["adsdf", "sfd"]
-    expected = ["adsdf", "sfd"]
+def test_findWords_with_all_row3_words(soln: Solution) -> None:
+    words = ["zxcvb", "mnbvcxz", "ZZX"]
+    expected = ["zxcvb", "mnbvcxz", "ZZX"]
     assert soln.findWords(words) == expected
 
 
-def test_case_4(soln: Solution) -> None:
-    words = ["qwerty", "asdf", "zxcvbn", "pop"]
-    expected = ["qwerty", "asdf", "zxcvbn", "pop"]
+def test_findWords_with_mixed_row_words(soln: Solution) -> None:
+    words = ["Hello", "World", "Python", "QwErTy"]
+    expected = ["QwErTy"]
     assert soln.findWords(words) == expected
 
 
-def test_case_5(soln: Solution) -> None:
-    words = ["QwErTyUiOp", "ASDFGHJKL", "ZXCVBNM"]
-    expected = ["QwErTyUiOp", "ASDFGHJKL", "ZXCVBNM"]
+def test_findWords_with_empty_list(soln: Solution) -> None:
+    words: List[str] = []
+    expected: List[str] = []
     assert soln.findWords(words) == expected
 
 
-def test_case_6(soln: Solution) -> None:
-    words = ["Hello", "World"]
-    expected: list[str] = []
+def test_findWords_with_no_valid_words(soln: Solution) -> None:
+    words = ["Hello", "World", "Peace"]
+    expected: List[str] = []
     assert soln.findWords(words) == expected
 
 
-def test_case_7(soln: Solution) -> None:
-    words: list[str] = []
-    expected: list[str] = []
+def test_findWords_with_single_row_words(soln: Solution) -> None:
+    words = ["Qwerty", "asdfg", "zxcvb", "Dad", "Alaska", "Peace"]
+    expected = ["Qwerty", "asdfg", "zxcvb", "Dad", "Alaska"]
     assert soln.findWords(words) == expected
 
 
-def test_case_8(soln: Solution) -> None:
-    words = ["QWER", "asdf", "zxcv", "tyuiop", "ghjkl", "bnm"]
-    expected = ["QWER", "asdf", "zxcv", "tyuiop", "ghjkl", "bnm"]
+def test_findWords_with_case_insensitivity(soln: Solution) -> None:
+    words = ["QWERTY", "ASDFG", "ZXCVB", "QwErTy"]
+    expected = ["QWERTY", "ASDFG", "ZXCVB", "QwErTy"]
     assert soln.findWords(words) == expected
 
 
