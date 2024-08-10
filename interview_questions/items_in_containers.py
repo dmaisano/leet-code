@@ -1,8 +1,10 @@
 from typing import List
 
+import pytest
 
 """
 [Company] would like to know how much inventory exists in their closed inventory compartments. Given a string s consisting of items as "*" and closed compartments as an open and close "|", an array of starting indices startIndices, and an array of ending indices endIndices, determine the number of items in closed compartments within the substring between the two indices, inclusive.
+
 
 An item is represented as an asterisk ('*' = ascii decimal 42)
 A compartment is represented as a pair of pipes that may or may not have items between them ('|' = ascii decimal 124).
@@ -22,9 +24,9 @@ Both of the answers are returned in an array,  [2, 3].
 
 ---
 
-Function Description .
+Function Description:
 
-Complete the number_of_items function in the editor below. The function must return an integer array that contains the results for each of the startIndices[i] and endIndices[i] pairs.
+Complete the number_of_items function. The function must return an integer array that contains the results for each of the startIndices[i] and endIndices[i] pairs.
 
 
 number_of_items has three parameters:
@@ -171,3 +173,7 @@ def number_of_items(
             result.append(0)
 
     return result
+
+
+if __name__ == "__main__":
+    pytest.main()
