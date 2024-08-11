@@ -1,6 +1,6 @@
 import pytest
 
-from .distribute_candies import Solution
+from ..distribute_candies import Solution
 
 
 @pytest.fixture

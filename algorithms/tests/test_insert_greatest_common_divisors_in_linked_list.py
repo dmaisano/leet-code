@@ -2,7 +2,7 @@ from typing import Optional
 
 import pytest
 
-from .insert_greatest_common_divisors_in_linked_list import ListNode, Number, Solution
+from ..insert_greatest_common_divisors_in_linked_list import ListNode, Number, Solution
 
 
 def sll_to_python_list(head: ListNode) -> list[Number]:

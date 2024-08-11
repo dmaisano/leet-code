@@ -1,6 +1,6 @@
 import pytest
 
-from .integer_to_roman import Solution
+from ..integer_to_roman import Solution
 
 
 @pytest.fixture

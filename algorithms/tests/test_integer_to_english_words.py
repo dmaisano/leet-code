@@ -1,6 +1,6 @@
 import pytest
 
-from .integer_to_english_words import Solution
+from ..integer_to_english_words import Solution
 
 
 @pytest.fixture

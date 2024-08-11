@@ -1,6 +1,6 @@
 import pytest
 
-from .jewels_and_stones import Solution
+from ..jewels_and_stones import Solution
 
 
 @pytest.fixture

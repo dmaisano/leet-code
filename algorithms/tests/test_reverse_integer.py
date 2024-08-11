@@ -1,6 +1,6 @@
 import pytest
 
-from .reverse_integer import Solution
+from ..reverse_integer import Solution
 
 
 @pytest.fixture
