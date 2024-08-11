@@ -47,7 +47,7 @@ def test_sorted_descending_order() -> None:
 # Test case 7: Array with large numbers
 def test_large_numbers_array() -> None:
     arr = [100, 200, 300, 400]
-    expected_output = [400]
+    expected_output = [300, 400]
     assert minimal_heaviest_setA(arr) == expected_output
 
 
