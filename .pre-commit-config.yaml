@@ -6,3 +6,9 @@ repos:
         entry: pytest
         language: python
         types: [python]
+      - id: run-vitest
+        name: Run vitest
+        entry: vitest
+        language: node
+        types: [file]
+        files: \.(js|ts)$
