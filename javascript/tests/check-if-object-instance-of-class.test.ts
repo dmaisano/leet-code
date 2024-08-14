@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { checkIfInstanceOf } from './check-if-object-instance-of-class'
+import { checkIfInstanceOf } from '../check-if-object-instance-of-class'
 
 describe('checkIfInstanceOf', () => {
   it('should return true for a Date instance', () => {

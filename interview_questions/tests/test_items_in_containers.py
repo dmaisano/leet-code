@@ -1,7 +1,7 @@
 from typing import List
 import pytest
 
-from .items_in_containers import number_of_items
+from ..items_in_containers import number_of_items
 
 
 def test_single_compartment_with_items() -> None:

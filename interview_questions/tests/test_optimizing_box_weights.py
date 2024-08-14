@@ -1,5 +1,6 @@
 import pytest
-from .optimizing_box_weights import minimal_heaviest_setA
+
+from ..optimizing_box_weights import minimal_heaviest_setA
 
 
 # Test case 1: Example with mixed weights from the problem statement
@@ -63,3 +64,7 @@ def test_random_order_array() -> None:
     arr = [3, 1, 4, 2, 5]
     expected_output = [5]
     assert minimal_heaviest_setA(arr)
+
+
+if __name__ == "__main__":
+    pytest.main()

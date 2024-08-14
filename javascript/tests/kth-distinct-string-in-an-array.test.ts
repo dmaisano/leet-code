@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { kthDistinct } from './kth-distinct-string-in-an-array'
+import { kthDistinct } from '../kth-distinct-string-in-an-array'
 
 describe('kthDistinct', () => {
   it('should return the k-th distinct string when there are enough distinct strings', () => {

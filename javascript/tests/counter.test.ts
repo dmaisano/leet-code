@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { createCounter } from './counter'
+import { createCounter } from '../counter'
 
 describe('createCounter', () => {
   it('should return a function that increments the counter', () => {

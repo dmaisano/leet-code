@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import './array-prototype-last'
+import '../array-prototype-last'
 
 describe('Array.prototype.last', () => {
   it('should return the last element of a non-empty array', () => {
