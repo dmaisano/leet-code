@@ -8,7 +8,7 @@ Kalepa; Senior Full Stack Engineer Interview Question
 
 https://www.glassdoor.com/Interview/Kalepa-Interview-Questions-E2322243.htm
 
-Content: Was asked to use beautifulsoup4 to scrape images from Getty Images website. Images seem to be loaded dynamically and require Javascript to be executed... (Used playwright to solve this)
+Context: Was asked to use BeautifulSoup4 to scrape images from Getty Images website. Images seem to be loaded dynamically and require Javascript to be executed... (Used playwright to solve this). In a NodeJS env, the native nodejs fetch simulates a browser environment and can be used to fetch the images by loading dynamic content. The Python Requests API does not have this functionality. Was incredibly disappointed that the interviewer did not know this gotcha nor did they write a solution to this prompt I was asked. Based on their remarks it seemed like an impromptu question and when it did not work with requests they seemed stumped; "hrm, this should work...". The interview was a mess 🙃
 """
 
 
