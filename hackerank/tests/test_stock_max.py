@@ -1,3 +1,5 @@
+from typing import List
+
 import pytest
 
 from ..stock_max.stock_max import stockmax
@@ -5,7 +7,7 @@ from ..stock_max.stock_max import stockmax
 
 def test_stockmax() -> None:
     # Test case 1: Empty list
-    prices: list[int] = []
+    prices: List[int] = []
     assert stockmax(prices) == 0
 
     # Test case 2: Single price

@@ -1,4 +1,7 @@
-def stockmax(prices: list[int]) -> int:
+from typing import List
+
+
+def stockmax(prices: List[int]) -> int:
     n = len(prices)
     max_profit = 0
     max_price = 0

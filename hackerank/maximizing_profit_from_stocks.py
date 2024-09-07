@@ -1,7 +1,7 @@
-from typing import Union
+from typing import List, Union
 
 
-def maxProfit(prices: Union[list[float], list[int]]) -> float:
+def maxProfit(prices: Union[List[float], List[int]]) -> float:
     # Initialize variables
     min_price = float("inf")  # A large initial value
     max_profit: float = 0.0  # Maximum profit starts at 0

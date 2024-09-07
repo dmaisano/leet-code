@@ -1,21 +1,19 @@
-from typing import Optional, TypeAlias, Union
-
-Number: TypeAlias = Union[int, float]
+from typing import Optional
 
 
 class ListNode:
-    def __init__(self, val: Number = 0, next: Optional["ListNode"] = None):
-        self.val: int | float = val
+    def __init__(self, val: int = 0, next: Optional["ListNode"] = None):
+        self.val: int = val
         self.next: ListNode | None = next
 
 
 class Solution:
-    def determineGCD(self, a: Number, b: Number) -> Number:
+    def determineGCD(self, a: int, b: int) -> int:
         while b:
             a, b = b, a % b
         return a
 
-    def listInsert(self, val: Number, node: Optional[ListNode] = None) -> None:
+    def listInsert(self, val: int, node: Optional[ListNode] = None) -> None:
         if node is not None:
             trail = node.next
             node.next = ListNode(val, trail)

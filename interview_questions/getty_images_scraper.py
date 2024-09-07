@@ -1,4 +1,5 @@
 import asyncio
+from typing import List
 from urllib.parse import urlencode
 
 from playwright.async_api import BrowserContext, async_playwright
@@ -14,7 +15,7 @@ Context: Was asked to use BeautifulSoup4 to scrape images from Getty Images webs
 
 async def fetch_images_from_page(
     ctx: BrowserContext, search_url: str, page_number: int
-) -> list[str]:
+) -> List[str]:
     query_string = urlencode({"page": page_number})
     page = await ctx.new_page()
     await page.goto(f"{search_url}?{query_string}")
@@ -31,7 +32,7 @@ async def fetch_images_from_page(
     return image_urls
 
 
-async def search_getty_images(search_phrase: str, num_pages: int) -> list[str]:
+async def search_getty_images(search_phrase: str, num_pages: int) -> List[str]:
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context()
