@@ -6,5 +6,11 @@
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "plugins": [
+    "prettier-plugin-sql"
+  ],
+  "keywordCase": "upper",
+  "dataTypeCase": "lower",
+  "functionCase": "upper"
 }

@@ -4,6 +4,9 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 4
   },
+  "[sql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "eslint.workingDirectories": [
     {
       "mode": "auto"
