@@ -1,18 +1,7 @@
-from typing import List, Optional
-
 import pytest
 
-from ..insert_greatest_common_divisors_in_linked_list import ListNode, Solution
-
-
-def sll_to_python_list(head: ListNode) -> List[int]:
-    """Helper function to convert ListNode to Python list for easy comparison."""
-    result: List[int] = []
-    current: Optional[ListNode] = head
-    while current is not None:
-        result.append(current.val)
-        current = current.next
-    return result
+from algorithms.insert_greatest_common_divisors_in_linked_list import Solution
+from algorithms.utils.sll import ListNode, sll_to_python_list
 
 
 @pytest.fixture
