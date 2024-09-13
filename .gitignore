@@ -41,6 +41,9 @@ dwsync.xml
 __pycache__
 .mypy_cache
 
+# golang
+__debug_bin*
+
 .env*
 !.env*.local
 !.env.example

@@ -4,8 +4,9 @@
   "version": "0.1.0",
   "description": "leet code problems",
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": "prettier --write",
-    "*.py": "black"
+    "*.{js,jsx,ts,tsx,json,md}": "prettier --write",
+    "*.py": "black",
+    "*.go": "gofmt -w"
   },
   "scripts": {
     "url-to-filename": "tsx ./scripts/url-to-filename.ts",
