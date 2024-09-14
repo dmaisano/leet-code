@@ -22,9 +22,9 @@ var digitMapping = map[string]string{
 }
 
 // sumCalibrationValuesPart1 sums the values by finding the first and last digits in each line.
-func sumCalibrationValuesPart1(calibrationDocument []string) int {
+func sumCalibrationValuesPart1(lines []string) int {
 	totalSum := 0
-	for _, line := range calibrationDocument {
+	for _, line := range lines {
 		firstDigit := ""
 		lastDigit := ""
 		// Find the first digit
@@ -92,10 +92,10 @@ func isDigit(char string) bool {
 }
 
 func main() {
-	calibrationDocument, _ := utils.ReadFileLines("/home/virtualdom/projects/leet-code/advent_of_code/2023/day_1/day_1.txt")
+	lines, _ := utils.ReadFileLines("/home/virtualdom/projects/leet-code/advent_of_code/2023/day_1/day_1.txt")
 
-	part1Points := sumCalibrationValuesPart1(calibrationDocument)
-	part2Points := sumCalibrationValuesPart2(calibrationDocument)
+	part1Points := sumCalibrationValuesPart1(lines)
+	part2Points := sumCalibrationValuesPart2(lines)
 
 	fmt.Printf("Part 1 total points: %d\n", part1Points)
 	fmt.Printf("Part 2 total points: %d\n", part2Points)
