@@ -1,6 +1,6 @@
 import pytest
 
-from ..maximizing_profit_from_stocks import maxProfit
+from hackerrank.maximizing_profit_from_stocks import maxProfit
 
 
 def test_maxProfit() -> None:

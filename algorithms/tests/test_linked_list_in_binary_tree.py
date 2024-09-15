@@ -2,7 +2,7 @@ from typing import List
 
 import pytest
 
-from ..linked_list_in_binary_tree import ListNode, Solution, TreeNode
+from algorithms.linked_list_in_binary_tree import ListNode, Solution, TreeNode
 
 
 # Helper function to create a linked list from a list of values

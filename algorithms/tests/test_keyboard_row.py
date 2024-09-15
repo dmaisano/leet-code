@@ -2,7 +2,7 @@ from typing import List
 
 import pytest
 
-from ..keyboard_row import Solution
+from algorithms.keyboard_row import Solution
 
 
 @pytest.fixture

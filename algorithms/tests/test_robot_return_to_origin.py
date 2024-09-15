@@ -1,6 +1,6 @@
 import pytest
 
-from ..robot_return_to_origin import Solution
+from algorithms.robot_return_to_origin import Solution
 
 
 @pytest.fixture

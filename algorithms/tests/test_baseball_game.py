@@ -1,6 +1,6 @@
 import pytest
 
-from ..baseball_game import Solution
+from algorithms.baseball_game import Solution
 
 
 @pytest.fixture

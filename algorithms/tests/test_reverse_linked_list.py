@@ -2,7 +2,7 @@ from typing import List, Optional
 
 import pytest
 
-from ..reverse_linked_list import ListNode, Solution
+from algorithms.reverse_linked_list import ListNode, Solution
 
 
 def create_linked_list(values: List[Optional[int]]) -> Optional[ListNode]:

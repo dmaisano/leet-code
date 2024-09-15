@@ -2,7 +2,7 @@ from typing import List
 
 import pytest
 
-from ..stock_max.stock_max import stockmax
+from hackerrank.stock_max.stock_max import stockmax
 
 
 def test_stockmax() -> None:

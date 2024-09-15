@@ -1,6 +1,6 @@
 import pytest
 
-from ..max_consecutive_ones import Solution
+from algorithms.max_consecutive_ones import Solution
 
 
 @pytest.fixture

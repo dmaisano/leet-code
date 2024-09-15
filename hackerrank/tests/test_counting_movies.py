@@ -3,7 +3,7 @@ from unittest.mock import patch
 import pytest
 import requests
 
-from ..counting_movies import getNumberOfMovies
+from hackerrank.counting_movies import getNumberOfMovies
 
 
 def test_getNumberOfMovies_success() -> None:

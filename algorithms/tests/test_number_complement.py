@@ -1,6 +1,6 @@
 import pytest
 
-from ..number_complement import Solution
+from algorithms.number_complement import Solution
 
 
 def test_find_complement_example_1() -> None:

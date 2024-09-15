@@ -1,6 +1,6 @@
 import pytest
 
-from ..fizz_buzz import Solution
+from algorithms.fizz_buzz import Solution
 
 
 def test_fizzbuzz_with_n_3() -> None:

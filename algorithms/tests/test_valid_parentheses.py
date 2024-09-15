@@ -1,6 +1,6 @@
 import pytest
 
-from ..valid_parentheses import Solution
+from algorithms.valid_parentheses import Solution
 
 
 def test_valid_parentheses() -> None:

@@ -1,6 +1,6 @@
 import pytest
 
-from ..fibonacci_number import Solution
+from algorithms.fibonacci_number import Solution
 
 
 @pytest.fixture

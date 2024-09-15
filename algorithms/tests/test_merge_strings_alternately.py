@@ -1,6 +1,6 @@
 import pytest
 
-from ..merge_strings_alternately import Solution
+from algorithms.merge_strings_alternately import Solution
 
 
 def test_merge_alternately_basic_case() -> None:

@@ -1,6 +1,6 @@
 import pytest
 
-from ..maximum_depth_of_binary_tree import Solution, TreeNode
+from algorithms.maximum_depth_of_binary_tree import Solution, TreeNode
 
 
 def test_max_depth_single_node() -> None:

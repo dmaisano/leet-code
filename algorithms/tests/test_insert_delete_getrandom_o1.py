@@ -2,7 +2,7 @@ from collections import Counter
 
 import pytest
 
-from ..insert_delete_getrandom_o1 import RandomizedSet
+from algorithms.insert_delete_getrandom_o1 import RandomizedSet
 
 
 class TestRandomizedSet:

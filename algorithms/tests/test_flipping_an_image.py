@@ -1,6 +1,6 @@
 import pytest
 
-from ..flipping_an_image import Solution
+from algorithms.flipping_an_image import Solution
 
 
 @pytest.fixture

@@ -1,6 +1,6 @@
 import pytest
 
-from ..hamming_distance import Solution
+from algorithms.hamming_distance import Solution
 
 
 def test_hamming_distance_example_1() -> None:

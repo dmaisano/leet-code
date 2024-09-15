@@ -1,6 +1,6 @@
 import pytest
 
-from ..first_unique_character import getUniqueCharacter
+from hackerrank.first_unique_character import getUniqueCharacter
 
 
 def test_getUniqueCharacter() -> None:

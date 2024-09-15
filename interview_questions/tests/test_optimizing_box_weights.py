@@ -1,6 +1,6 @@
 import pytest
 
-from ..optimizing_box_weights import minimal_heaviest_setA
+from interview_questions.optimizing_box_weights import minimal_heaviest_setA
 
 
 # Test case 1: Example with mixed weights from the problem statement

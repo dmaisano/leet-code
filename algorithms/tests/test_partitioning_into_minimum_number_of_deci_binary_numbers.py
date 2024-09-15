@@ -1,6 +1,6 @@
 import pytest
 
-from ..partitioning_into_minimum_number_of_deci_binary_numbers import Solution
+from algorithms.partitioning_into_minimum_number_of_deci_binary_numbers import Solution
 
 
 @pytest.fixture

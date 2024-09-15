@@ -1,6 +1,6 @@
 import pytest
 
-from ..longest_palindrome import Solution
+from algorithms.longest_palindrome import Solution
 
 soln = Solution()
 

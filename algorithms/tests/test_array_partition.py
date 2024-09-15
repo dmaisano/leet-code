@@ -1,6 +1,6 @@
 import pytest
 
-from ..array_partition import Solution
+from algorithms.array_partition import Solution
 
 
 @pytest.fixture

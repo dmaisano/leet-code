@@ -1,6 +1,6 @@
 import pytest
 
-from ..encode_and_decode_tinyurl import Codec
+from algorithms.encode_and_decode_tinyurl import Codec
 
 
 @pytest.fixture
