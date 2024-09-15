@@ -16,6 +16,5 @@ class Solution:
 
         if odd_found:
             length += 1
-            print(s, length)
 
         return length

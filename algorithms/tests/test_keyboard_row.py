@@ -13,7 +13,6 @@ def soln() -> Solution:
 def test_findWords_with_all_row1_words(soln: Solution) -> None:
     words = ["not_row_1", "also_not_row_1", "def_not_row_1", "QwErTy"]
     expected = ["QwErTy"]
-    print(soln.findWords(words))
     assert soln.findWords(words) == expected
 
 
