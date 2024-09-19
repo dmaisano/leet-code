@@ -5,11 +5,6 @@ import pytest
 from algorithms.different_ways_to_add_parentheses import Solution
 
 
-@pytest.fixture
-def soln() -> Solution:
-    return Solution()
-
-
 @pytest.mark.parametrize(
     "expression, expected_outputs",
     [
