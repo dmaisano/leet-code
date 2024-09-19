@@ -41,18 +41,18 @@ func parseGame(line string) Game {
 	return Game{ID: id, Counts: counts}
 }
 
-func isGamePossible(game Game, maxCounts Counts) bool {
-	for _, counts := range game.Counts {
-		if counts.Red > maxCounts.Red || counts.Green > maxCounts.Green || counts.Blue > maxCounts.Blue {
-			return false
-		}
-	}
-	return true
-}
-
 func part1Soln(lines []string) int {
 	redCount, greenCount, blueCount := 12, 13, 14
 	possibleGameIDs := []int{}
+
+	isGamePossible := func(game Game, maxCounts Counts) bool {
+		for _, counts := range game.Counts {
+			if counts.Red > maxCounts.Red || counts.Green > maxCounts.Green || counts.Blue > maxCounts.Blue {
+				return false
+			}
+		}
+		return true
+	}
 
 	for i, line := range lines {
 		parsedGame := parseGame(line)
@@ -68,26 +68,23 @@ func part1Soln(lines []string) int {
 	return sum
 }
 
-func findMinimumCubes(game Game) Counts {
-	minCubes := Counts{}
-	for _, counts := range game.Counts {
-		minCubes.Red = max(counts.Red, minCubes.Red)
-		minCubes.Green = max(counts.Green, minCubes.Green)
-		minCubes.Blue = max(counts.Blue, minCubes.Blue)
-	}
-	return minCubes
-}
-
-func calcCubePower(count Counts) int {
-	return count.Red * count.Green * count.Blue
-}
-
 func part2Soln(lines []string) int {
 	sumCubePowers := 0
+
+	findMinimumCubes := func(game Game) Counts {
+		minCubes := Counts{}
+		for _, counts := range game.Counts {
+			minCubes.Red = max(counts.Red, minCubes.Red)
+			minCubes.Green = max(counts.Green, minCubes.Green)
+			minCubes.Blue = max(counts.Blue, minCubes.Blue)
+		}
+		return minCubes
+	}
+
 	for _, line := range lines {
 		parsedGame := parseGame(line)
 		minCubes := findMinimumCubes(parsedGame)
-		sumCubePowers += calcCubePower(minCubes)
+		sumCubePowers += minCubes.Red * minCubes.Green * minCubes.Blue
 	}
 	return sumCubePowers
 }
@@ -95,9 +92,9 @@ func part2Soln(lines []string) int {
 func main() {
 	lines, _ := utils.ReadFileLines("/home/virtualdom/projects/leet-code/advent_of_code/2023/day_2/day_2.txt")
 
-	sumGameIds := part1Soln(lines)
-	sumCubePowers := part2Soln(lines)
+	part1 := part1Soln(lines)
+	part2 := part2Soln(lines)
 
-	fmt.Printf("part 1 total points: %d\n", sumGameIds)
-	fmt.Printf("Part 2 total points: %d\n", sumCubePowers)
+	fmt.Printf("Part 1: %d\n", part1) // 2331
+	fmt.Printf("Part 2: %d\n", part2) // 71585
 }

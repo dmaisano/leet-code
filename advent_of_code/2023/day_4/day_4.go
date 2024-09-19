@@ -17,18 +17,14 @@ type Card struct {
 func parseLines(lines []string) []Card {
 	var cards []Card
 	for _, line := range lines {
-		cards = append(cards, parseCard(line))
+		parts := strings.Split(line, "|")
+		cards = append(cards, Card{
+			WinningNumbers: parseNumbers(parts[0]),
+			YourNumbers:    parseNumbers(parts[1]),
+		})
+
 	}
 	return cards
-}
-
-func parseCard(line string) Card {
-	parts := strings.Split(line, "|")
-
-	return Card{
-		WinningNumbers: parseNumbers(parts[0]),
-		YourNumbers:    parseNumbers(parts[1]),
-	}
 }
 
 func parseNumbers(s string) []int {
@@ -100,9 +96,7 @@ func part2Soln(lines []string) int {
 		element := queue.Front()
 		queue.Remove(element)
 		cardIndex := element.Value.(int)
-
 		card := cards[cardIndex]
-
 		numMatches := countMatches(card)
 
 		for i := 1; i <= numMatches; i++ {
@@ -125,6 +119,6 @@ func main() {
 	part1TotalCards := part1Soln(lines)
 	part2TotalCards := part2Soln(lines)
 
-	fmt.Printf("Part 1 points: %d\n", part1TotalCards)
-	fmt.Printf("Part 2 total cards: %d\n", part2TotalCards)
+	fmt.Printf("Part 1: %d\n", part1TotalCards) // 23235
+	fmt.Printf("Part 2: %d\n", part2TotalCards) // 5920640
 }

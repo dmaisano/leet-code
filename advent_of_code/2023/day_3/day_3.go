@@ -75,24 +75,15 @@ func hasAdjacentSymbol(pos [2]int, symbolPositions map[[2]int]bool, width, heigh
 	return false
 }
 
-func getCharAt(lines []string, x, y int) rune {
-	if y >= 0 && y < len(lines) && x >= 0 && x < len(lines[y]) {
-		return rune(lines[y][x])
-	}
-	return ' '
-}
-
 func part1Soln(lines []string) int {
 	numbers, symbols, width, height := parseGrid(lines)
 	sum := 0
 
-	// Build a set of symbol positions for quick lookup
 	symbolPositions := make(map[[2]int]bool)
 	for pos := range symbols {
 		symbolPositions[pos] = true
 	}
 
-	// For each number, check if any of its positions is adjacent to a symbol
 	for _, number := range numbers {
 		isPartNumber := false
 		for _, pos := range number.positions {
@@ -113,7 +104,6 @@ func part2Soln(lines []string) int {
 	numbers, symbols, width, height := parseGrid(lines)
 	sum := 0
 
-	// Build a map from position to number value for quick lookup
 	positionToNumber := make(map[[2]int]int)
 	for _, number := range numbers {
 		for _, pos := range number.positions {
@@ -121,7 +111,6 @@ func part2Soln(lines []string) int {
 		}
 	}
 
-	// Map digit positions to their parent numbers
 	digitToNumber := make(map[[2]int]int)
 	for _, number := range numbers {
 		for _, pos := range number.positions {
@@ -129,8 +118,14 @@ func part2Soln(lines []string) int {
 		}
 	}
 
+	getCharAt := func(lines []string, x, y int) rune {
+		if y >= 0 && y < len(lines) && x >= 0 && x < len(lines[y]) {
+			return rune(lines[y][x])
+		}
+		return ' '
+	}
+
 	for pos := range symbols {
-		// Only consider '*' symbols
 		if getCharAt(lines, pos[0], pos[1]) != '*' {
 			continue
 		}
@@ -155,9 +150,9 @@ func part2Soln(lines []string) int {
 func main() {
 	lines, _ := utils.ReadFileLines("/home/virtualdom/projects/leet-code/advent_of_code/2023/day_3/day_3.txt")
 
-	part1Sum := part1Soln(lines)
-	part2Sum := part2Soln(lines)
+	part1 := part1Soln(lines)
+	part2 := part2Soln(lines)
 
-	fmt.Printf("Part 1 sum of all part numbers: %d\n", part1Sum)
-	fmt.Printf("Part 2 sum of all gear ratios: %d\n", part2Sum)
+	fmt.Printf("Part 1: %d\n", part1) // 514969
+	fmt.Printf("Part 2: %d\n", part2) // 78915902
 }
