@@ -3,12 +3,8 @@ import pytest
 from algorithms.jewels_and_stones import Solution
 
 
-@pytest.fixture
-def soln() -> Solution:
-    return Solution()
-
-
-def test_numJewelsInStones(soln: Solution) -> None:
+def test_numJewelsInStones() -> None:
+    soln = Solution()
     assert soln.numJewelsInStones("aA", "aAAbbbb") == 3
     assert soln.numJewelsInStones("z", "ZZ") == 0
     assert soln.numJewelsInStones("", "aAAbbbb") == 0

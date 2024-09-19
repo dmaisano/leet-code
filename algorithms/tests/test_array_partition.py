@@ -3,12 +3,8 @@ import pytest
 from algorithms.array_partition import Solution
 
 
-@pytest.fixture
-def soln() -> Solution:
-    return Solution()
-
-
-def test_arrayPairSum(soln: Solution) -> None:
+def test_arrayPairSum() -> None:
+    soln = Solution()
     assert soln.arrayPairSum([1, 4, 3, 2]) == 4
     assert soln.arrayPairSum([6, 2, 6, 5, 1, 2]) == 9
     assert soln.arrayPairSum([1, 1, 1, 1]) == 2

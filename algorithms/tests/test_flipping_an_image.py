@@ -3,12 +3,7 @@ import pytest
 from algorithms.flipping_an_image import Solution
 
 
-@pytest.fixture
-def soln() -> Solution:
-    return Solution()
-
-
-def test_flip_and_invert_image(soln: Solution) -> None:
+def test_flip_and_invert_image() -> None:
     sol = Solution()
 
     image1 = [[1, 1, 0], [1, 0, 1], [0, 0, 0]]

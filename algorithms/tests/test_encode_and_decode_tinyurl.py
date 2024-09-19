@@ -3,12 +3,8 @@ import pytest
 from algorithms.encode_and_decode_tinyurl import Codec
 
 
-@pytest.fixture
-def codec() -> Codec:
-    return Codec()
-
-
-def test_codec(codec: Codec) -> None:
+def test_codec() -> None:
+    codec = Codec()
     url = "https://leetcode.com/problems/design-tinyurl"
     short_url = codec.encode(url)
     assert codec.decode(short_url) == url

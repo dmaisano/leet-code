@@ -3,12 +3,8 @@ import pytest
 from algorithms.distribute_candies import Solution
 
 
-@pytest.fixture
-def soln() -> Solution:
-    return Solution()
-
-
-def test_distributeCandies(soln: Solution) -> None:
+def test_distributeCandies() -> None:
+    soln = Solution()
     assert soln.distributeCandies([1, 1, 2, 2, 3, 3]) == 3
     assert soln.distributeCandies([1, 1, 2, 3]) == 2
     assert soln.distributeCandies([6, 6, 6, 6]) == 1

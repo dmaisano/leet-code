@@ -3,12 +3,8 @@ import pytest
 from algorithms.robot_return_to_origin import Solution
 
 
-@pytest.fixture
-def soln() -> Solution:
-    return Solution()
-
-
-def test_judgeCircle(soln: Solution) -> None:
+def test_judgeCircle() -> None:
+    soln = Solution()
     assert soln.judgeCircle("UD") == True, "Test case 1 failed"
     assert soln.judgeCircle("LL") == False, "Test case 2 failed"
     assert soln.judgeCircle("") == True, "Test case 3 failed"

@@ -3,12 +3,8 @@ import pytest
 from algorithms.reverse_integer import Solution
 
 
-@pytest.fixture
-def soln() -> Solution:
-    return Solution()
-
-
-def test_reverse_integer(soln: Solution) -> None:
+def test_reverse_integer() -> None:
+    soln = Solution()
     assert soln.reverse(123) == 321
     assert soln.reverse(-123) == -321
     assert soln.reverse(120) == 21

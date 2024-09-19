@@ -3,12 +3,8 @@ import pytest
 from algorithms.baseball_game import Solution
 
 
-@pytest.fixture
-def soln() -> Solution:
-    return Solution()
-
-
-def test_calPoints(soln: Solution) -> None:
+def test_calPoints() -> None:
+    soln = Solution()
     assert soln.calPoints(["5", "2", "C", "D", "+"]) == 30
     assert soln.calPoints(["5", "-2", "4", "C", "D", "9", "+", "+"]) == 27
     assert soln.calPoints(["1", "C"]) == 0
