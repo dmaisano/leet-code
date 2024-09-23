@@ -1,3 +1,5 @@
+CALL drop_all_tables ();
+
 CREATE TABLE If NOT EXISTS Person (
   personId int,
   firstName varchar(255),
@@ -31,7 +33,7 @@ INSERT INTO
 VALUES
   ('2', '3', 'Leetcode', 'California');
 
--- ? START
+-- ? START SOLUTION
 SELECT
   FirstName,
   LastName,
@@ -41,4 +43,4 @@ FROM
   Person p
   LEFT JOIN Address a ON p.PersonId = a.PersonId;
 
--- ? END
+-- ? END SOLUTION
