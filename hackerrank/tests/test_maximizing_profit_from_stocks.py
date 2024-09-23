@@ -4,7 +4,6 @@ from hackerrank.maximizing_profit_from_stocks import maxProfit
 
 
 def test_maxProfit() -> None:
-    # Test cases
     test_cases = [
         ([7, 1, 5, 3, 6, 4], 5.0),  # Buy at 1, sell at 6 for a profit of 5
         ([7, 6, 4, 3, 1], 0.0),  # No profit can be made
