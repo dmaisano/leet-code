@@ -10,7 +10,7 @@
   },
   "scripts": {
     "url-to-filename": "tsx ./scripts/url-to-filename.ts",
-    "test": "vitest"
+    "test": "vitest run"
   },
   "author": "dmaisano",
   "license": "ISC",
