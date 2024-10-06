@@ -1,16 +1,16 @@
 {
   "arrowParens": "always",
+  "dataTypeCase": "lower",
   "experimentalTernaries": true,
+  "functionCase": "upper",
   "htmlWhitespaceSensitivity": "ignore",
+  "keywordCase": "upper",
+  "plugins": [
+    "prettier-plugin-sql"
+  ],
   "printWidth": 100,
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "all",
-  "plugins": [
-    "prettier-plugin-sql"
-  ],
-  "keywordCase": "upper",
-  "dataTypeCase": "lower",
-  "functionCase": "upper"
+  "trailingComma": "all"
 }
